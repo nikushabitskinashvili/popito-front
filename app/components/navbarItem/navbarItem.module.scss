@@ -1,0 +1,25 @@
+
+.defaultLink {
+    color: #ffff;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.defaultLink:hover {
+    color: #FF520B;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.active {
+    color: #FF520B;
+    text-decoration-line: underline;
+}
