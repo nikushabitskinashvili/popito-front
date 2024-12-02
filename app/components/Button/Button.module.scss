@@ -1,0 +1,19 @@
+.container {
+    background-color: #FF520B;
+    width: 203px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    color: #F9F9F9;
+
+    &:hover{
+        background-color: #FF6E33;
+    }
+    &:active {
+        background-color: #FF8857;
+    }
+}   
+
