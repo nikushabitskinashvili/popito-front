@@ -1,17 +1,9 @@
 import React from 'react';
 import styles from './HeaderInput.module.scss';
 import Image from 'next/image';
+import { headerInputProps } from '@/app/Interfaces/Interfaces';
 
-interface InputProps {
-    type?: 'text' | 'email' | 'password' | 'number' | 'file';
-    placeholder?: string;
-    value?: string | number;
-    name?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    className?: string;
-}
-
-const HeaderInput: React.FC<InputProps> = ({
+const HeaderInput: React.FC<headerInputProps> = ({
     type = 'text',
     placeholder = 'Search',
     value,
