@@ -1,13 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./NavbarItem.module.scss";
+import { navbarItemProps } from "@/app/Interfaces/Interfaces";
 
-type Props = {
-  active: boolean;
-  pathname: string;
-  title: string;
-};
-const NavbarItem = (props: Props) => {
+const NavbarItem = (props: navbarItemProps) => {
   return (
     <li>
       <Link

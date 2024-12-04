@@ -2,10 +2,8 @@
 
 import React from 'react';
 import styles from './Button.module.scss';
+import { ButtonProps } from '@/app/Interfaces/Interfaces';
 
-interface ButtonProps {
-  openModal: () => void; 
-}
 
 export default function Button({ openModal }: ButtonProps) {
   const handleButtonClick = () => {
