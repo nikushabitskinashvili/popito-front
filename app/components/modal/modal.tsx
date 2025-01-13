@@ -5,19 +5,22 @@ import styles from './modal.module.scss';
 import Image from 'next/image';
 import { ModalProps } from '@/app/Interfaces/Interfaces';
 
-
 export default function Modal({ isModalOpen, closeModal }: ModalProps) {
   if (!isModalOpen) return null;
 
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
   const handleRadioChange = (value: string) => {
-    setSelectedAnswer(prev => (prev === value ? null : value));
+    setSelectedAnswer((prev) => (prev === value ? null : value));
+  };
+
+  const handleContainerClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation(); 
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>
+    <div className={styles.wrapper} onClick={closeModal}> 
+      <div className={styles.container} onClick={handleContainerClick}>
         <div className={styles.header}>
           <span className={styles.heading}>Let's choose a movie together for today</span>
           <div className={styles.x} onClick={closeModal}>
