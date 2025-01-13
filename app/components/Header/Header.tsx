@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import Image from "next/image";
@@ -7,6 +7,12 @@ import NavbarItem from "../navbarItem/navbarItem";
 import { usePathname } from "next/navigation";
 import HeaderInput from "../HeaderInput/HeaderInput";
 const Header = () => {
+  const [isClient,setIsClient]=useState(false)
+
+  useEffect(()=>{
+    setIsClient(true)
+  },[])
+
   const navLinks = [
     { title: "Home", pathname: "/", key: "/" },
     { title: "Movies", pathname: "/movies", key: "/movies" },
@@ -16,6 +22,7 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
+    isClient && 
     <div className={styles.container}>
       <div className={styles.containerWrapper}>
         <Link href={"/"}>
